@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 class MyQueue {
@@ -8,7 +8,7 @@ public:
        
     }
     
-    void push(int x) {
+    void enQueue(int x) {
        //enqueue operation
        while(!s1.empty()){
            s2.push(s1.top());
@@ -21,7 +21,7 @@ public:
        }
     }
     
-    int pop() {
+    int deQueue() {
         if(s1.empty()){
             return -1;
         }
@@ -44,3 +44,17 @@ public:
         }
     }
 };
+
+int main()
+{
+    MyQueue q;
+    q.enQueue(1);
+    q.enQueue(2);
+    q.enQueue(3);
+  
+    cout << q.deQueue() << '\n';
+    cout << q.deQueue() << '\n';
+    cout << q.deQueue() << '\n';
+  
+    return 0;
+}
